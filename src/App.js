@@ -1,9 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-function Pairing() {
-  return <h1>Pairing</h1>;
-}
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Pairing from './Pairing';
 
 function Ranking() {
   return <h1>Ranking</h1>;
@@ -19,9 +16,9 @@ function App() {
       <div>
         <nav>
           <ul>
-            <li><Link to="/">Pairing</Link></li>
-            <li><Link to="/ranking">Ranking</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to='/'>Pairing</Link></li>
+            <li><Link to='/ranking'>Ranking</Link></li>
+            <li><Link to='/about'>About</Link></li>
           </ul>
         </nav>
       </div>
