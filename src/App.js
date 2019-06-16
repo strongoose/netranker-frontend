@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+function Pairing() {
+  return <h1>Pairing</h1>;
+}
+
+function Ranking() {
+  return <h1>Ranking</h1>;
+}
+
+function About() {
+  return <h1>About</h1>;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li><Link to="/">Pairing</Link></li>
+            <li><Link to="/ranking">Ranking</Link></li>
+            <li><Link to="/about">About</Link></li>
+          </ul>
+        </nav>
+      </div>
+      <Route exact path='/' component={Pairing}/>
+      <Route path='/ranking' component={Ranking}/>
+      <Route path='/about' component={About}/>
+    </Router>
   );
 }
 
