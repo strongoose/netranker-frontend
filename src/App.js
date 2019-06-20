@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import Pairing from './Pairing';
 
 function Ranking() {
@@ -10,18 +10,22 @@ function About() {
   return <h1>About</h1>;
 }
 
+function NavBar(props) {
+  return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a className="navbar-brand" href="/">NetRanker</a>
+    <ul className="navbar-nav">
+      <NavLink className="nav-link" activeClassName="nav-link active" exact to='/' >Pairing</NavLink>
+      <NavLink className="nav-link" activeClassName="nav-link active" to='/ranking'>Ranking</NavLink>
+      <NavLink className="nav-link" activeClassName="nav-link active" to='/about'>About</NavLink>
+    </ul>
+  </nav>
+}
+
+
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to='/'>Pairing</Link></li>
-            <li><Link to='/ranking'>Ranking</Link></li>
-            <li><Link to='/about'>About</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <NavBar/>
       <Route exact path='/' component={Pairing}/>
       <Route path='/ranking' component={Ranking}/>
       <Route path='/about' component={About}/>
