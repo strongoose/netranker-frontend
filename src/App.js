@@ -1,10 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-import Pairing from './Pairing';
 
-function Ranking() {
-  return <h1>Ranking</h1>;
-}
+import Pairing from './Pairing';
+import Ranking from './Ranking';
 
 function About() {
   return <h1>About</h1>;
