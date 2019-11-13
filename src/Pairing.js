@@ -16,13 +16,13 @@ function Pairing(props) {
       <Card
         name='Parasite'
         // src='https://netrunnerdb.com/card_image/01012.png'
-        src='http://localhost:8000/01012.png'
+        src='http://assets.glyx.co.uk/anr/cards/01012.png'
       />
     <div className="m-5"><h2>vs</h2></div>
       <Card
         name='Temüjin Contract'
         // src='http://www.cardgamedb.com/forums/uploads/an/med_ADN37_26.png'
-        src='http://localhost:8000/11026.png'
+        src='http://assets.glyx.co.uk/anr/cards/11026.png'
       />
     </div>
   </div>
